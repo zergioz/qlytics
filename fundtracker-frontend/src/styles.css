@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* note: this is a hack for ios iframe for bootstrap themes shopify page */
+/* this chunk of css is not part of the toolkit :) */
+body { width: 1px; min-width: 100%; *width: 100%; }
+
+.percent-2-margin{
+	margin-bottom: 2%;
+	margin-top: 2%;
+
+}
+.ticker-border{
+	border: 1px solid #434857;
+}
+
+/* treemap */
+.chart {
+  display: block;
+  margin: auto;
+}
+
+text {
+  font-size: 11px;
+}
+
+rect {
+  fill: none;
+}
+

@@ -1,20 +1,232 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="with-iconav">
+
+  <nav class="iconav">
+    <a class="iconav-brand" href="../index.html">
+      <span><img src="./assets/img/logo-small.png"></span>
+    </a>
+    <div class="iconav-slider">
+      <ul class="nav nav-pills iconav-nav flex-md-column">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html" title="Overview" data-toggle="tooltip" data-placement="right" data-container="body">
+            <span class="icon icon-bar-graph"></span>
+            <small class="iconav-nav-label d-md-none">Overview</small>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../order-history/index.html" title="Order history" data-toggle="tooltip" data-placement="right" data-container="body">
+            <span class="icon icon-text-document"></span>
+            <small class="iconav-nav-label d-md-none">History</small>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../fluid/index.html" title="Fluid layout" data-toggle="tooltip" data-placement="right" data-container="body">
+            <span class="icon icon-mobile"></span>
+            <small class="iconav-nav-label d-md-none">Mobile</small>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../docs/index.html" title="Docs" data-toggle="tooltip" data-placement="right" data-container="body">
+            <span class="icon icon-credit"></span>
+            <small class="iconav-nav-label d-md-none">Holdings</small>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid container-fluid-spacious">
+    <div class="dashhead">
+      <div class="dashhead-titles">
+        <h6 class="dashhead-subtitle">Dashboards</h6>
+        <h3 class="dashhead-title">Direxion Portfolio Analysis Application</h3>
+      </div>
+
+      <div class="dashhead-toolbar">
+        <div class="input-with-icon dashhead-toolbar-item">
+          <input type="text" value="01/01/15 - 01/08/15" class="form-control" data-provide="datepicker">
+          <span class="icon icon-calendar"></span>
+        </div>
+        <span class="dashhead-toolbar-divider d-none d-md-inline-block"></span>
+        <div class="btn-group dashhead-toolbar-item btn-group-thirds">
+          <button type="button" class="btn btn-outline-primary">Day</button>
+          <button type="button" class="btn btn-outline-primary active">Week</button>
+          <button type="button" class="btn btn-outline-primary">Month</button>
+        </div>
+      </div>
+    </div>
+
+    <ul class="nav nav-bordered mt-4 mt-md-2 mb-0 clearfix" role="tablist">
+     <!-- MORE STUFF WILL GO HERE -->
+    </ul>
+
+    <hr class="mt-0 mb-5">
+    <!-- TOP CHARTS -->
+    <div class="row">
+    <div class="col-sm-8">
+      <div class="statcard statcard-default p-8 .percent-2-margin" id="content-treemap" width="900" height="600">
+        <!-- ANGULAR CHART COMPONENT - TREEMAP-->   
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="statcard statcard-default p-1 percent-2-margin">
+        <app-d3 *ngIf="chartData" [data]="chartData"></app-d3>
+      </div>
+      <div class="statcard statcard-default p-1 percent-2-margin">
+        <app-d3 *ngIf="chartData" [data]="chartData"></app-d3>
+      </div>
+      <div class="statcard statcard-default p-1 percent-2-margin">
+        <app-d3 *ngIf="chartData" [data]="chartData"></app-d3>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="statcard statcard-default p-1 percent-2-margin">
+        <app-d3 *ngIf="chartData" [data]="chartData"></app-d3>
+      </div>
+      <div class="statcard statcard-default p-1 percent-2-margin">
+        <app-d3 *ngIf="chartData" [data]="chartData"></app-d3>
+      </div>
+      <div class="statcard statcard-default p-1 percent-2-margin">
+        <app-d3 *ngIf="chartData" [data]="chartData"></app-d3>
+      </div>
+    </div>
+    </div>
+    <div class="row statcards mt-3 mb-3 text-xs-center text-md-left">
+       <div id="content-mid-barchart"></div>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="row">
+      <div class="col-lg-4 mb-5">
+        <div class="list-group mb-3">
+          <h6 class="list-group-header">TOP 10</h6>
+          <table class="table table-striped table-hover ticker-border">
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Name</th>
+                  <th>Last</th>
+                  <th>%Change</th>
+                  <th>Vol</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-muted" >YYY</td>
+                  <td class="text-muted">YYY</td>
+                  <td class="text-muted">30.300</td>
+                  <td class="text-muted">30.300</td>
+                  <td class="text-muted">30.300</td>
+                </tr>
+                <tr>
+                  <td class="text-muted" >YYY</td>
+                  <td class="text-muted">YYY</td>
+                  <td class="text-muted">30.300</td>
+                  <td class="text-muted">30.300</td>
+                  <td class="text-muted">30.300</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-5">
+        <div class="list-group mb-3">
+          <h6 class="list-group-header">BOTTOM 10</h6>
+            <table class="table table-striped table-hover ticker-border">
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Name</th>
+                  <th>Last</th>
+                  <th>%Change</th>
+                  <th>Vol</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-muted" >YYY</td>
+                  <td class="text-muted">YYY</td>
+                  <td class="text-muted">30.300</td>
+                  <td class="text-muted">30.300</td>
+                  <td class="text-muted">30.300</td>
+                </tr>
+                <tr>
+                  <td class="text-muted" >YYY</td>
+                  <td class="text-muted">YYY</td>
+                  <td class="text-muted">30.300</td>
+                  <td class="text-muted">30.300</td>
+                  <td class="text-muted">30.300</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-5">
+        <div class="list-group mb-3">
+          <h6 class="list-group-header"></h6>
+          <table class="table table-striped table-hover ticker-border">
+            <tbody>
+              <tr>
+                <td class="text-muted" >YYY</td>
+                <td class="text-muted">YYY</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+              </tr>
+              <tr>
+                <td class="text-muted" >YYY</td>
+                <td class="text-muted">YYY</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+              </tr>
+               <tr>
+                <td class="text-muted" >YYY</td>
+                <td class="text-muted">YYY</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+              </tr>
+               <tr>
+                <td class="text-muted" >YYY</td>
+                <td class="text-muted">YYY</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+              </tr>
+               <tr>
+                <td class="text-muted" >YYY</td>
+                <td class="text-muted">YYY</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+              </tr>
+               <tr>
+                <td class="text-muted" >YYY</td>
+                <td class="text-muted">YYY</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+              </tr>
+               <tr>
+                <td class="text-muted" >YYY</td>
+                <td class="text-muted">YYY</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+              </tr>
+               <tr>
+                <td class="text-muted" >YYY</td>
+                <td class="text-muted">YYY</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+                <td class="text-muted">30.300</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 

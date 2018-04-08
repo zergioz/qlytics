@@ -2,13 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Qlytics - Fundtracker</title>
+  <title>Fund Tracker Frontend</title>
   <base href="/">
-
+  <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+<body>	
+  	<app-root></app-root> 
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>Direxion Portfolio Analysis Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+    <link href="./assets/css/toolkit-inverse.css" rel="stylesheet">
+    <link href="./assets/css/application.css" rel="stylesheet">
+    <style>
+      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+      /* this chunk of css is not part of the toolkit :) */
+      body {
+        width: 1px;
+        min-width: 100%;
+        *width: 100%;
+      }
+    </style>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/chart.js"></script>
+    <script src="./assets/js/tablesorter.min.js"></script>
+    <script src="./assets/js/toolkit.js"></script>
+    <script src="./assets/js/application.js"></script>
+    <script src="./assets/js/d3.v4.min.js" charset="utf-8"></script>
+    <script src="./assets/js/d3.js" charset="utf-8"></script>
+    <script src="./assets/js/d3.layout.js" charset="utf-8"></script>
+    <script src="./assets/js/d3.tip.v0.6.3.js"></script>
+    <script src="./assets/js/custom.charts.js"></script>
+
+    <script>
+      // execute/clear BS loaders for docs
+      $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})
+    </script>
+  </head>
 <body>
-  <app-root></app-root>
+	<app-root></app-root>
 </body>
 </html>
